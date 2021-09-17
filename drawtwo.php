@@ -47,5 +47,17 @@ function calc_card_total($card_array1){
     <?php endforeach; ?>
     <h1><?php echo "Your card total is $card_total"; ?></h1>
 
+     <?php if($card_total > 21): ?>
+       Sorry your total is above 21
+       <a href="index.php">Play Again</a>
+   <?php elseif($card_total == 21): ?>
+       You win, take a trip to Vegas
+       <a href="index.php">Play Again</a>
+   <?php else: ?>
+    Are you feeling lucky?
+       <a href="drawagain.php">Draw again</a>
+   <?php endif; ?>
+
+
 </body>
 </html>
